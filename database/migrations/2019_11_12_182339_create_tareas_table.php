@@ -35,3 +35,4 @@ public function up()
    Schema::dropIfExists('tareas');
 }
 }
+

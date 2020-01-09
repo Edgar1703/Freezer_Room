@@ -41,7 +41,8 @@ Route::resource('marisco', 'MariscoController');
 
 Route::resource('producto', 'ProductoController');
 
-Route::resource('empleado', 'EmpleadoController');
+Route::resource('empleados', 'EmpleadosController');
+Route::resource('paquetes', 'PaquetesController');
 
 route::get('libro', 'LibroController@index');
 route::get('libro/{id}', 'LibroController@show')->where(['id' => '[0-9]+']);

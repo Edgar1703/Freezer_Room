@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateEmpleadosTable extends Migration
 {
@@ -12,16 +11,16 @@ class CreateEmpleadosTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('empleados', function (Blueprint $table) {
-            $table->increments('id');
+     {
+        Schema::create('carnes', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('nombre');
-            $table->string('apellido');
-            $table->integer('id_empleado');
-            $table->integer('zona_id');
+            $table->string('edad');
+            $table->string('seccion');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -29,6 +28,6 @@ class CreateEmpleadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empleados');
+        Schema::drop('empleados');
     }
 }
